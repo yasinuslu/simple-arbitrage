@@ -1,0 +1,31 @@
+version: '3.4'
+
+volumes:
+  mongo: {}
+  redis: {}
+
+services:
+  redis:
+    image: redis:alpine
+    volumes:
+      - redis:/data
+
+  mongo:
+    image: mongo
+    restart: always
+    volumes:
+      - mongo:/data/db
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+
+  api:
+    build: .
+    depends_on:
+      - mongo
+    environment:
+      APP_MONGO_URL: mongodb://mongo/db
+      APP_REDIS_QUEUE_URL: redis://redis:6379/1
