@@ -25,8 +25,11 @@
     "setupTestFrameworkScriptFile": "./config/jest.setup.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bull": "^3.4.8",
     "ccxt": "^1.17.482",
+    "ioredis": "^4.2.0",
+    "lodash": "^4.17.11",
     "pino": "^5.8.1"
   },
   "husky": {

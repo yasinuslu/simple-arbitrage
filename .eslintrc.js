@@ -10,6 +10,7 @@ module.exports = {
     node: true,
   },
   rules: {
+    'new-cap': 'off',
     'global-require': 'off',
     'import/no-dynamic-require': 'off',
     'no-unused-vars': ['error', { args: 'none' }],
