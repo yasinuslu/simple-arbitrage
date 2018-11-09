@@ -1391,10 +1391,10 @@ capture-stack-trace@^1.0.0:
   resolved "https://registry.yarnpkg.com/capture-stack-trace/-/capture-stack-trace-1.0.1.tgz#a6c0bbe1f38f3aa0b92238ecb6ff42c344d4135d"
   integrity sha512-mYQLZnx5Qt1JgB1WEiMCf2647plpGeQ2NMR/5L0HNZzGQo4fuSPnK+wjfPnKZV0aiJDgzmWqqkV/g7JD+DW0qw==
 
-ccxt@^1.17.482:
-  version "1.17.482"
-  resolved "https://registry.yarnpkg.com/ccxt/-/ccxt-1.17.482.tgz#519bc15fdb7c18e963f5f93c87e43b1d066cb828"
-  integrity sha512-pDkUMMK7YRGeNBsGSguFh2OFLzKKB4q5K0h/Qwx0K8AO0jS8qw1kgyIw4/M9TJnHysIr5wSshY4fW5xn3pUWpg==
+ccxt@^1.17.485:
+  version "1.17.485"
+  resolved "https://registry.yarnpkg.com/ccxt/-/ccxt-1.17.485.tgz#1bf2dfd3768d5de054bfa865a685f5971e37070a"
+  integrity sha512-mtfjin4IKaM/1uDHDzRNuXXifqZkTKt46UNlRMtXLp+hDPqir2jharKYm4ylTlP6HBjBfrmxnM8/ttjf2DIgvQ==
   dependencies:
     cached-path-relative "1.0.2"
     crypto-js "3.1.9-1"
