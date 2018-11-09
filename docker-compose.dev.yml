@@ -4,20 +4,6 @@ volumes:
   node_modules: {}
 
 services:
-  redis:
-    ports:
-      - 127.0.0.1:6379:6379
-
-  postgres:
-    ports:
-      - 127.0.0.1:5432:5432
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 5012:8080
-
   api:
     build:
       target: dev

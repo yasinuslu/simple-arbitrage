@@ -7,7 +7,7 @@ services:
         max-size: '10m'
         max-file: '5'
 
-  mongo:
+  postgres:
     logging:
       options:
         max-size: '10m'

@@ -13,11 +13,13 @@
     "test": "jest",
     "test:debug": "node --inspect-brk=0.0.0.0:9229 ./node_modules/.bin/jest --runInBand --detectOpenHandles",
     "dev": "yarn && backpack --inspect=0.0.0.0:9229 | pino-pretty --translateTime",
+    "build": "backpack build",
+    "start": "node ./build/main.js",
     "docd": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml",
     "doct": "yarn docd -f docker-compose.task.yml",
     "drun": "yarn doct run --rm --user `id -u`:`id -g` task yarn",
     "dinstall": "yarn doct run --rm task chown -R node:node .; yarn drun install",
-    "dup": "yarn docd up -d redis postgres adminer"
+    "dup": "yarn docd up -d redis postgres"
   },
   "jest": {
     "testEnvironment": "node",

@@ -9,18 +9,16 @@ services:
     image: redis:alpine
     volumes:
       - redis:/data
+    ports:
+      - 127.0.0.1:6379:6379
 
   postgres:
     image: postgres:alpine
     restart: always
     volumes:
       - postgres:/var/lib/postgresql/data
-
-  adminer:
-    image: adminer:alpine
-    restart: always
     ports:
-      - 5012:8080
+      - 127.0.0.1:5432:5432
 
   api:
     build: .
