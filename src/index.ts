@@ -1,17 +1,11 @@
 import './exchanges';
 
-import redis from './redis';
-import * as queue from './queue';
 import checkArbitrage from './checkArbitrage';
 import * as db from './db';
+import * as queue from './queue';
+import redis from './redis';
 
 queue.checkArbitrage.process(checkArbitrage);
-
-const keepAlive = () => {
-  // eslint-disable-next-line no-underscore-dangle
-  const _keepAlive = () => {};
-  setInterval(_keepAlive, 10000);
-};
 
 (async () => {
   await Promise.all([
@@ -21,6 +15,4 @@ const keepAlive = () => {
   ]);
 
   queue.checkArbitrage.add({}, { repeat: { every: 5000 } });
-
-  keepAlive();
 })();

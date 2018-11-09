@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 module.exports = {
   webpack: (config, options, webpack) => {
-    config.entry.main = ['./src/main.ts'];
+    config.entry.main = ['./src/index.ts'];
 
     config.resolve = {
       extensions: ['.ts', '.js', '.json'],

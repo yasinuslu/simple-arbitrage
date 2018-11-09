@@ -4,6 +4,7 @@
       "es5",
       "es2015.promise"
     ],
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }

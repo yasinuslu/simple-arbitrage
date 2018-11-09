@@ -2,13 +2,15 @@ import axios from 'axios';
 import _ from 'lodash';
 
 export default class Fiat {
+  public client: any;
+
   constructor() {
     this.client = axios.create({
       baseURL: 'https://api.doviz.com/list/C',
     });
   }
 
-  async fetchTickers() {
+  public async fetchTickers() {
     const res = await this.client.get('/');
     return _.chain(res.data.value)
       .map(obj => ({
@@ -23,7 +25,7 @@ export default class Fiat {
       .value();
   }
 
-  async fetchTicker(symbol = 'USD/TRY') {
+  public async fetchTicker(symbol = 'USD/TRY') {
     const tickers = await this.fetchTickers();
     return tickers[symbol];
   }

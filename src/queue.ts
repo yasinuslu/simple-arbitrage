@@ -1,4 +1,4 @@
-import Queue from 'bull';
+import * as Queue from 'bull';
 import * as env from './env';
 
 // eslint-disable-next-line import/prefer-default-export

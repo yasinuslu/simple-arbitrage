@@ -1,4 +1,4 @@
-import Redis from 'ioredis';
+import * as Redis from 'ioredis';
 import * as env from './env';
 
 // eslint-disable-next-line import/prefer-default-export

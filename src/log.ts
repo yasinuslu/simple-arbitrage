@@ -1,3 +1,3 @@
-import pino from 'pino';
+import * as pino from 'pino';
 
 export default pino({ name: 'pro-arb' });
