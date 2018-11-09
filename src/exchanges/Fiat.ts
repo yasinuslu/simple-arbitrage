@@ -1,5 +1,5 @@
 import axios from 'axios';
-import _ from 'lodash';
+import * as _ from 'lodash';
 
 export default class Fiat {
   public client: any;

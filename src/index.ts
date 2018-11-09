@@ -14,5 +14,5 @@ queue.checkArbitrage.process(checkArbitrage);
     new Promise(resolve => setTimeout(resolve, 2000)),
   ]);
 
-  queue.checkArbitrage.add({}, { repeat: { every: 1000 } });
+  queue.checkArbitrage.add({}, { repeat: { every: 5000 } });
 })();

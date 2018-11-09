@@ -16,3 +16,4 @@ rules:
       - ban-single-arg-parens
   no-var-requires: false
   object-literal-sort-keys: false
+  trailing-comma: false
