@@ -1,7 +1,6 @@
 version: '3.4'
 
 volumes:
-  mongo: {}
   redis: {}
   postgres: {}
 
@@ -10,12 +9,6 @@ services:
     image: redis:alpine
     volumes:
       - redis:/data
-
-  mongo:
-    image: mongo
-    restart: always
-    volumes:
-      - mongo:/data/db
 
   postgres:
     image: postgres:alpine
@@ -31,8 +24,6 @@ services:
 
   api:
     build: .
-    depends_on:
-      - mongo
     environment:
-      APP_MONGO_URL: mongodb://mongo/db
+      APP_DB_URL: postgresql://postgres:postgres@postgres/postgres
       APP_REDIS_QUEUE_URL: redis://redis:6379/1

@@ -17,13 +17,14 @@
     "doct": "yarn docd -f docker-compose.task.yml",
     "drun": "yarn doct run --rm --user `id -u`:`id -g` task yarn",
     "dinstall": "yarn doct run --rm task chown -R node:node .; yarn drun install",
-    "dup": "yarn docd up -d redis mongo postgres adminer"
+    "dup": "yarn docd up -d redis postgres adminer"
   },
   "jest": {
     "testEnvironment": "node",
     "setupTestFrameworkScriptFile": "./config/jest.setup.js"
   },
   "dependencies": {
+    "awesome-typescript-loader": "^5.2.1",
     "axios": "^0.18.0",
     "backpack-core": "^0.8.2",
     "bull": "^3.4.8",
@@ -31,7 +32,11 @@
     "ioredis": "^4.2.0",
     "lodash": "^4.17.11",
     "mongoose": "^5.3.10",
-    "pino": "^5.8.1"
+    "pg": "^7.6.1",
+    "pino": "^5.8.1",
+    "reflect-metadata": "^0.1.12",
+    "typeorm": "^0.2.8",
+    "typescript": "^3.1.6"
   },
   "husky": {
     "hooks": {

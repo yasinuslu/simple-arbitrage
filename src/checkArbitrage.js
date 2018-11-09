@@ -1,4 +1,4 @@
-// import { Arbitrage } from './models';
+import Arbitrage from './entities/Arbitrage.ts';
 
 // import Fiat from './fiat';
 

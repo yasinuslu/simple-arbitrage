@@ -3,6 +3,7 @@ import './exchanges';
 import redis from './redis';
 import * as queue from './queue';
 import checkArbitrage from './checkArbitrage';
+import * as db from './db';
 
 queue.checkArbitrage.process(checkArbitrage);
 
@@ -13,8 +14,11 @@ const keepAlive = () => {
 };
 
 (async () => {
-  await redis.queue.flushdb();
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  await Promise.all([
+    db.setup(),
+    redis.queue.flushdb(),
+    new Promise(resolve => setTimeout(resolve, 2000)),
+  ]);
 
   queue.checkArbitrage.add({}, { repeat: { every: 5000 } });
 
