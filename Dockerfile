@@ -1,4 +1,4 @@
-FROM node:8-alpine as dev
+FROM node:10-alpine as dev
 
 WORKDIR /app
 
@@ -16,7 +16,7 @@ RUN yarn install --production --frozen-lockfile \
 RUN yarn install --frozen-lockfile
 
 # starting point for production image
-FROM node:8-alpine as prod
+FROM node:10-alpine as prod
 
 WORKDIR /app
 

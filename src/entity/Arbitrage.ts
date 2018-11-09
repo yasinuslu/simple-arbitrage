@@ -5,8 +5,11 @@ class Arbitrage {
   @PrimaryGeneratedColumn()
   public id: number;
 
-  @Column()
-  public firstName: string;
+  @Column({ type: 'timestamptz' })
+  public time: Date;
+
+  // @Column()
+  // public btcSell: number;
 }
 
 export default Arbitrage;
