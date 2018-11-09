@@ -43,6 +43,15 @@ class Arbitrage {
 
   @Column({ type: 'numeric' })
   public targetEthAmount: number;
+
+  @Column({ type: 'numeric' })
+  public changeThreshold: number;
+
+  @Column({ type: 'numeric' })
+  public minProfitRate: number;
+
+  @Column({ type: 'numeric' })
+  public minReturnRate: number;
 }
 
 export default Arbitrage;
