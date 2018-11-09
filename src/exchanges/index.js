@@ -1,0 +1,2 @@
+require('./binance');
+require('./btcturk');

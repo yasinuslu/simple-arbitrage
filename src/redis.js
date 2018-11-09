@@ -1,8 +1,9 @@
-const Redis = require('ioredis');
-const env = require('./env');
+import Redis from 'ioredis';
+import * as env from './env';
 
+// eslint-disable-next-line import/prefer-default-export
 const queue = new Redis(env.queueRedisUrl, {
   enableReadyCheck: true,
 });
 
-module.exports = { queue };
+export default { queue };

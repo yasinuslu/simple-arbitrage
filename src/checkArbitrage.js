@@ -1,17 +1,22 @@
-// const ccxt = require('ccxt');
+// import { Arbitrage } from './models';
 
-const Fiat = require('./fiat');
-const log = require('./log').child({ ns: 'checkArbitrage' });
+// import Fiat from './fiat';
 
-const fiat = new Fiat();
+const log = require('./log').default.child({ ns: 'checkArbitrage' });
+
+// const fiat = new Fiat();
 // const binance = new ccxt.binance();
 // const btcTurk = new ccxt.btcturk();
 
-module.exports = async job => {
+export default async job => {
   try {
-    const usdTry = await fiat.fetchTicker();
-    log.info('usd/try: %d', usdTry.buy);
-    log.info('checking for arbitrage');
+    // const arb = new Arbitrage({
+    //   time: new Date(),
+    // });
+    // await arb.save();
+    // const usdTry = await fiat.fetchTicker();
+    // log.info('usd/try: %d', usdTry.buy);
+    // log.info('checking for arbitrage');
     // const orderBook = await binance.fetchOrderBook('ETH/USDT');
     // log.info('orderBook %o', orderBook);
     // const orderBook = await btcTurk.fetchOrderBook('ETH/TRY');

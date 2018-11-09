@@ -1,7 +1,7 @@
-const axios = require('axios');
-const _ = require('lodash');
+import axios from 'axios';
+import _ from 'lodash';
 
-module.exports = class Fiat {
+export default class Fiat {
   constructor() {
     this.client = axios.create({
       baseURL: 'https://api.doviz.com/list/C',
@@ -27,4 +27,4 @@ module.exports = class Fiat {
     const tickers = await this.fetchTickers();
     return tickers[symbol];
   }
-};
+}

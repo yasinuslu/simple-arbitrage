@@ -1,8 +1,5 @@
-const Queue = require('bull');
-const env = require('./env');
+import Queue from 'bull';
+import * as env from './env';
 
-const checkArbitrage = new Queue('checkArbitrage', env.queueRedisUrl);
-
-module.exports = {
-  checkArbitrage,
-};
+// eslint-disable-next-line import/prefer-default-export
+export const checkArbitrage = new Queue('checkArbitrage', env.queueRedisUrl);

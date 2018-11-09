@@ -3,6 +3,7 @@ version: '3.4'
 volumes:
   mongo: {}
   redis: {}
+  postgres: {}
 
 services:
   redis:
@@ -16,11 +17,17 @@ services:
     volumes:
       - mongo:/data/db
 
-  mongo-express:
-    image: mongo-express
+  postgres:
+    image: postgres:alpine
+    restart: always
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer:alpine
     restart: always
     ports:
-      - 8081:8081
+      - 5012:8080
 
   api:
     build: .

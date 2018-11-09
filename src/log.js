@@ -1,5 +1,3 @@
-const pino = require('pino');
+import pino from 'pino';
 
-const log = pino({ name: 'pro-arb' });
-
-module.exports = log;
+export default pino({ name: 'pro-arb' });

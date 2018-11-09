@@ -1,9 +1,8 @@
-require('./binance');
-require('./btcturk');
+import './exchanges';
 
-const redis = require('./redis');
-const queue = require('./queue');
-const checkArbitrage = require('./checkArbitrage');
+import redis from './redis';
+import * as queue from './queue';
+import checkArbitrage from './checkArbitrage';
 
 queue.checkArbitrage.process(checkArbitrage);
 

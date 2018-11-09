@@ -1,4 +1,4 @@
-const ccxt = require('ccxt');
+import ccxt from 'ccxt';
 
 ccxt.btcturk = class btcturk extends ccxt.btcturk {
   async fetchOrderBook(...args) {
@@ -7,4 +7,4 @@ ccxt.btcturk = class btcturk extends ccxt.btcturk {
   }
 };
 
-module.exports = ccxt.btcturk;
+export default ccxt.btcturk;
