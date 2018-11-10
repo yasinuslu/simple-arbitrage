@@ -1,5 +1,7 @@
 FROM node:10-alpine as dev
 
+ARG NPM_CONFIG_UNSAFE_PERM=true
+
 WORKDIR /app
 
 # We need some packages in development
